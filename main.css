@@ -1,0 +1,86 @@
+:root {
+  --body-font: 18px;
+  --heading-font: 22px;
+}
+h1{
+  text-align: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: var(--body-font);
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  height: 200px;
+}
+main{
+  min-height: 60vh;
+  width: 100%;
+}
+header {
+  padding: 20px;
+  font-size: 22px;
+  color: aliceblue;
+  background: black;
+}
+main {
+  background: rgb(133, 240, 204);
+  color: black;
+  padding: 20px;
+  
+}
+.posts .content{
+    padding: 10px;
+}
+.posts{
+    margin: 20px auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  flex-wrap: wrap;
+   border: 1px solid rgb(28, 53, 11);
+   min-height: 300px;
+   margin-bottom: 30px;
+ flex-direction: row;
+   max-width: 300px;
+   overflow: hidden;
+
+}
+.posts .image img{width: 100%;}
+
+.form{
+    padding: 10px;
+  
+}
+.form form{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form *{
+    padding: 10px 20px;
+    width: 70%;
+    outline: none;
+   
+
+}
+form input[type="submit"]{
+    background: rgb(17, 87, 32);
+    color: white;
+    cursor: pointer;
+}
+footer {
+  background: rgba(12, 12, 12, 0);
+  padding: 20px;
+  text-align: center;
+}
