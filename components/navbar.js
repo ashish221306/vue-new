@@ -1,9 +1,25 @@
-const navigation={
-    template:`
+const navigation = {
+  data() {
+    return {
+      routes:[
+        {link:'',routename:'home'},
+        {link:'/newpost',routename:'new post'},
+        {link:'/allpost',routename:'post'},
+      ]
+
+    }
+  },
+
+  methods() {
+     "path"
+  },
+ 
+  
+  template: `
     <nav>
     <ul>
      <li v-for="route of routes">
-       <router-link :to="routeLink">{{route.routeName}}</router-link>
+       <router-link :to="route.link">{{route.routename}}</router-link>
       </li>
     </ul>
   </nav>

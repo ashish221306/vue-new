@@ -1,12 +1,19 @@
 const allpost={
-  props:[],
+  props:['temp'],
   data(){
     return{
-      posts:[]
+     posts:[]
     }
   },
+
     template:`
-    <div class="posts" v-for="post of posts">
+    <hr>
+
+
+   <h2 v-if="this.$root.posts.length" style="text-align:center">allpost</h2>
+   <br>
+    <div class="post-container">
+    <div class="posts" v-for="post of this.$root.posts">
           <div class="content">
             <h1>{{post.title}}</h1>
             <p>{{post.description}}</p>
@@ -14,6 +21,8 @@ const allpost={
           <div class="image">
             <img :src="post.image" :alt="post.title" />
           </div>
-        </div>
+    </div>
+    </div>
+   
     `
 }
