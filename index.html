@@ -1,65 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-    <link rel="stylesheet" href="./main.css" />
-  </head>
 
-  <body>
-    <div class="wrap" id="myapp">
-      <header>
-        <h1>{{AppName}}</h1><br>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1527151977613-a89904713c47?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwxNjMwODg1fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Vue-js project | blog">
+  <script>
+    var x=window.location.href
+  </script>
+  <meta property="og:url" content=`${x}`>
+  <meta property="og:description"
+    content="vue js practise project">
+  <meta property="og:type" content=article>
+  <meta name="theme-color" content="rgb(133, 240, 204)">
+  <link rel="stylesheet" href="./main.css" />
+ 
+</head>
+
+<body>
+  <div class="wrap" id="myapp">
+    <header>
+      <h1>{{AppName}}</h1><br>
       <!--header-->
       <myheader></myheader>
       <!--header-->
-      </header>
-      <navbar></navbar>
-      
+    </header>
+    <navbar></navbar>
 
 
-      <!---------->
-           
+
+    <!---------->
+
     <main>
-       
+
       <h1 v-if="posts.length">total posts : {{posts.length}}</h1>
       <h1 v-else>No pOst</h1>
       <!--new post-->
       <newpost ref="refposts" :postarray="postdata"></newpost>
       <!--new post ends-->
-  
+
       <!--post-->
-    
-     <allpost :temp="posts"></allpost>
+
+      <allpost :temp="posts"></allpost>
       <!--post end-->
-   <router-view></router-view>
+      <router-view></router-view>
     </main>
 
- 
-      <!-------------------->
-     
-      <footer>
-       <!--footer-->
-       <myfooter></myfooter>
-      </footer>
-    </div>
-   <script>
-  
-   </script>
 
-    <script src="https://unpkg.com/vue@next"></script>
- 
-   
-    <script src="./home.js"></script>
-    <script src="./components/cmp.js"></script>
-    <script src="./components/post.js"></script>
-    <script src="./components/newPost.js"></script>
-    <script src="./components/navbar.js"></script>
-    <script src="./components/notfound.js"></script>
-    <script src="./main.js"></script>
-   
-  
-  </body>
+    <!-------------------->
+
+    <footer>
+      <!--footer-->
+      <myfooter></myfooter>
+    </footer>
+  </div>
+  <script>
+
+  </script>
+
+  <script src="https://unpkg.com/vue@next"></script>
+
+
+  <script src="./home.js"></script>
+  <script src="./components/cmp.js"></script>
+  <script src="./components/post.js"></script>
+  <script src="./components/newPost.js"></script>
+  <script src="./components/navbar.js"></script>
+  <script src="./components/notfound.js"></script>
+  <script src="./main.js"></script>
+
+
+</body>
+
 </html>
