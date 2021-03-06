@@ -9,25 +9,43 @@ const routes = [
 
 ]
 
-const router=new VueRouter({
-  routes
+const router = new VueRouter({
+  routes: routes
 })
 var app = {
-  
-
-
-   data() {
+  router,
+  data() {
     return {
       AppName: "Vue js Practise Project",
       posts: [],
       myname: 'ashish',
       postdata: ' done',
-      currentRoute: window.location.pathname
+      currentRoute: window.location.pathname,
+
+      /* dynamic css class for vue :class */
+      cssClass: {
+        'black': false,
+        'red': true
+      }
+    }
+
+  },
+  methods: {
+    toggleClass() {
+      if (this.cssClass.black === false) {
+        this.cssClass.black = true;
+      } else {
+        this.cssClass.black = false;
+
+      }
+    
+
     }
   },
+
 };
 
- 
+
 
 
 const app1 = Vue.createApp(app);

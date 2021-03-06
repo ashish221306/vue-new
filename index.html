@@ -9,17 +9,15 @@
   </head>
 
   <body>
-    <div class="wrap" id="myapp">
+    
+    <div class="wrap"  id="myapp">
       <header>
-        <h1>{{AppName}}</h1><br>
+        <h1 v-on:click="toggleClass" :class="cssClass">{{AppName}}</h1><br>
       <!--header-->
       <myheader></myheader>
       <!--header-->
       </header>
       <navbar></navbar>
-      
-
-
       <!---------->
            
     <main>
@@ -27,7 +25,7 @@
       <h1 v-if="posts.length">total posts : {{posts.length}}</h1>
       <h1 v-else>No pOst</h1>
       <!--new post-->
-      <newpost ref="refposts" :postarray="postdata"></newpost>
+      <newpost ref="refposts" :writer1="Ashish"></newpost>
       <!--new post ends-->
   
       <!--post-->
