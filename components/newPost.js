@@ -32,10 +32,13 @@ const newpost = {
       <input type="text" name="title" placeholder="title" v-model="title" />
       <textarea name="description" placeholder="description" v-model="description" rows="3"></textarea>
       <input type="text" name="tags" placeholder="tags" v-model="tags" />
-      <input type="text" name="image" placeholder="image" v-model="image" />
-      <img v-if="image" :src="image" height="200" width="60"/>
+     <div class="input-group">
+     <input type="text" name="image" placeholder="image url" v-model="image" />  <img v-if="image" :src="image" height="200" width="60"/>
+     </div>
+     
       <input type="text" placeholder="post writer" v-model="writer"/>
-      <input type="submit" value="post" />
+      <input type="submit" value="publish post" />
+    
     </form>
    
   </div>

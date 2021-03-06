@@ -14,12 +14,17 @@ const router = new VueRouter({
 })
 var app = {
   router,
+  props:['notes'],
   data() {
     return {
       AppName: "Vue js Practise Project",
       posts: [],
+      notes:'my notes ......',
+      value:'',
       myname: 'ashish',
+      show: true,
       postdata: ' done',
+      incfont: 20,
       currentRoute: window.location.pathname,
 
       /* dynamic css class for vue :class */
@@ -29,19 +34,40 @@ var app = {
       }
     }
 
+
   },
+  emits:[],
   methods: {
     toggleClass() {
       if (this.cssClass.black === false) {
         this.cssClass.black = true;
       } else {
-        this.cssClass.black = false;
-
+        this.cssClass.black = false
       }
-    
 
+
+    },
+    descreasefont(){
+    this.incfont-=30;
+    if(this.incfont<30){
+      this.incfont=20
     }
+    }
+
+
+
   },
+  mounted() {
+
+
+  },
+  computed() {
+    window.myfontsize = this.incfont;
+  }
+  ,
+  created() {
+    // this.$on('increaseFont',data=>{console.log("data :"+data)})
+  }
 
 };
 
@@ -60,3 +86,6 @@ app1.component('notfound', notfound)
 const vm = app1.mount("#myapp");
 
 
+
+
+console.log("myfontsize :" + window.myfontsize)

@@ -1,6 +1,6 @@
 
      const component1 = {
-        template: "  <h1> This is header compoennt</h1>",
+        template: "  <h1>Learning Vue JS</h1>",
       };
     
       const footercmp={
