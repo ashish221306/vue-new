@@ -8,11 +8,17 @@ const allpost = {
   },
   methods: {
     increaseFont() {
-      this.postFontSize = this.postFontSize * 1.2 + 1;
+      this.postFontSize = this.postFontSize  + 10;
     },
     descreasefont(){
       this.postFontSize = this.postFontSize -40 ;
 
+    },
+    async getUser(){
+      let url="https://randomuser.me/api";
+      const res=await fetch(url);
+      const {results}=await res.json();
+      console.log(JSON.stringify(results));
     }
   },
 
@@ -50,6 +56,7 @@ const allpost = {
     </div>
     </div>
    
-   
+    
     `
 }
+

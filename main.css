@@ -177,6 +177,11 @@ footer {
 nav{
   background: rgb(15, 24, 1);
   border-top: 1px solid #ddd;
+  
+    max-height: 70px!important;
+    white-space:nowrap;
+    overflow-x: auto;
+  
 }
 nav ul {
   list-style: none;
@@ -230,4 +235,41 @@ button{
   justify-content: center;align-items: center;}
   .input-group input{flex: 100%;}
 .input-group img{flex: 100%;width: 300px;padding: 10px;}
+}
+.user{
+  margin:20px auto;
+  height: 300px;
+  width: 270px;
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(15, 24, 1);
+  border: 1px solid #ccc;
+  color: aliceblue;
+}
+.user h2{
+  margin: 0;
+  padding: 0;
+}
+.user img{
+border-radius: 50%;
+height: 120px;
+width: 120px;
+margin-bottom: 10px;
+}
+.user h2,.user p{line-height: 1;}
+.user p{
+  margin:20px auto;
+  padding: 0;
+}
+.male{
+border: 3px solid rgb(55, 68, 248);
+background: rgb(58, 102, 221)!important;
+border-radius: 5px;
+}
+.female{
+border: 3px solid rgb(236, 27, 184);
+background: rgb(236, 27, 184)!important;
+border-radius: 5px;
 }

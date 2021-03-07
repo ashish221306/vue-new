@@ -83,6 +83,7 @@ app1.component('myfooter', footercmp)
 app1.component('navbar', navigation)
 app1.component('home', home)
 app1.component('notfound', notfound)
+app1.component('getuser',getuser)
 const vm = app1.mount("#myapp");
 
 
