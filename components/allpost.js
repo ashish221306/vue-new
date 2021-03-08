@@ -1,9 +1,10 @@
 const allpost = {
-  props: ['writtenby', 'name1'],
+  props: ['writtenby', 'name1','fontnow'],
   data() {
     return {
       posts: [],
       postFontSize: 20,
+      fontnow:''
     }
   },
   methods: {
@@ -11,7 +12,8 @@ const allpost = {
       this.postFontSize = this.postFontSize  + 10;
     },
     descreasefont(){
-      this.postFontSize = this.postFontSize -40 ;
+      this.postFontSize = this.fontnow
+      alert('descrese font')
 
     },
     async getUser(){
@@ -29,7 +31,7 @@ const allpost = {
 
   template: `
     <hr>
-
+    <slot></slot>
 
     <button class="btn btn-font"  @click="$emit('increasefont',postFontSize);increaseFont()">
     <span>+</span>
@@ -37,7 +39,7 @@ const allpost = {
 
 
 
-<h1 :style="{fontSize:postFontSize+'px'}">hi how are you : {{writtenby}} - {{name1}}</h1>
+<!-- <h1 :style="{fontSize:postFontSize+'px'}">hi how are you : {{writtenby}} - {{name1}}</h1>-->
    <h2 :style="{fontSize:postFontSize+'px'}" v-if="this.$root.posts.length" style="text-align:center">allpost</h2>
    <br>
  

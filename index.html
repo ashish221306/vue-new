@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,41 +9,35 @@
   <meta property="og:image" content="https://images.unsplash.com/photo-1527151977613-a89904713c47?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwxNjMwODg1fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:title" content="Vue-js project | blog">
-  <script>
-    var x=window.location.href
-  </script>
-  <meta property="og:url" content=`${x}`>
+  <meta name="description" content="new vue js learning project">
   <meta property="og:description"
     content="vue js practise project">
   <meta property="og:type" content=article>
   <meta name="theme-color" content="rgb(133, 240, 204)">
-  <link rel="stylesheet" href="./main.css" />
+  <link rel="stylesheet" href="./main.min.css" />
  
 </head>
-
 <body>
   <div class="wrap" id="myapp">
-   
-    <header>
+   <h3 id="publishmsg">nice! , post {{ posts.length }} is published</h3>
+    <header role="banner">
       <h1 :style="{fontSize:incfont+'px'}" >{{AppName}}</h1><br>
       <!--header-->
       <myheader></myheader>
     
       <!--header-->
     </header>
-    <navbar></navbar>
+    <navbar ></navbar>
 
     <button class="btn btn-show" v-on:click="show=!show;">
       <span v-if="show==true">Hide</span>
       <span v-else="show==false">Show</span>
     </button>
    
-   
-
 
     <!---------->
   
-    <main v-if="show">
+    <main v-if="show" role="main">
       <button class="btn btn-decrease" @click="descreasefont">
         <span>-</span>
        </button>
@@ -57,7 +50,9 @@
       <!--post-->
 
      <transition v-if="show==true" name="fade">
-      <allpost :temp="posts"  writtenby="Ashish KUmar" :name1="myname"   v-on:increasefont="incfont=incfont+$event" ></allpost>
+      <allpost :temp="posts"  writtenby="Ashish KUmar" :name1="myname"   v-on:increasefont="incfont=incfont+$event" :fontnow="incfont"   >
+     
+      </allpost>
      </transition>
       <!--post end-->
       <router-view></router-view>
@@ -67,17 +62,23 @@
 
     <!-------------------->
 
-    <footer>
+    <footer role="contentinfo">
       <!--footer-->
       <getuser></getuser>
-      <myfooter></myfooter>
+      <myfooter>
+        <h2>this is going into inplaceof slot tag</h2>
+        <template v-slot:buttoncontent>
+        this is for button slot
+        </template>
+      </myfooter>
       <br>
       <hr>
       
       <div class="concept">
         <h3>parent > child communication : use main $refs , props </h3>
-       <form id="notes">
-        <input type="text" placeholder="Notes ...." :value="notes" v-on:input="$('upadate:notes'),$event.target.value"  />
+       <form id="notes" role="form">
+         <label  for="notess">notes</label>
+        <input type="text" id="notess" placeholder="Notes ...." :value="notes" v-on:input="$('upadate:notes'),$event.target.value"  />
        </form>
         
       </div>
@@ -91,14 +92,16 @@
   <script src="https://unpkg.com/vue@next"></script>
 
 
-  <script src="./home.js"></script>
+  <script async src="./home.js"></script>
   <script src="./components/cmp.js"></script>
   <script src="./components/allpost.js"></script>
   <script src="./components/newPost.js"></script>
   <script src="./components/navbar.js"></script>
   <script src="./components/notfound.js"></script>
   <script src="./components/getUser.js"></script>
-  <script src="./main.js"></script>
+  <script async src="./main.min.js"></script>
+  <script async src="./style.min.js"></script>
+  <script async src="./seo.js"></script>
 
 
 </body>

@@ -16,7 +16,7 @@ const navigation = {
  
   
   template: `
-    <nav>
+    <nav role="navigation">
     <ul>
      <li v-for="route of routes">
        <router-link :to="route.link">{{route.routename}}</router-link>

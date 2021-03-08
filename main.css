@@ -4,6 +4,7 @@
 }
 h1 {
   text-align: center;
+
 }
 * {
   margin: 0;
@@ -33,10 +34,10 @@ header {
 transform: scale(1.5);
 }
 header {
-  height: 200px;
+  height: 140px;
 }
 main {
-  min-height: 70vh;
+
   width: 100%;
   overflow-x: hidden;
 }
@@ -183,6 +184,7 @@ nav{
     overflow-x: auto;
   
 }
+
 nav ul {
   list-style: none;
   display: flex;
@@ -224,11 +226,40 @@ header h1{
   color: red;
 }
 button{
-  transition: 0.6s;
+  transition:opacity 0.1s ;
 }
 #tp{
   position: sticky;
   top: 10px;
+}
+
+#publishmsg{
+  transition:opacity 0.6s;
+  opacity: 0;
+  text-align: center;
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  color:#fff;
+  background: rgb(4, 100, 4);
+  border: 2px solid #ccc;
+  padding: 20px 10px;
+  height: 70px;
+  width: 80%;
+  margin: auto;
+  z-index: 87263478;
+}
+.btnslot[title]:hover::after{
+content: attr(title);
+color:greenyellow;
+font-size: 30px;
+position:absolute;
+top: -100%;
+}
+@media screen and (min-width:700px){
+  label[for="image"]{
+    display: none;
+  }
 }
 @media screen and (max-width:600px){
   .input-group{flex-direction: column;width: 100%;
