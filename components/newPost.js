@@ -10,7 +10,7 @@ const newpost = {
       posts:[],
       isDone:'component communication',
       id:1
-
+      
     }
     
   },
