@@ -26,11 +26,23 @@ const newpost = {
         writer: this.writer,
         id: this.id++,
       });
-      // localStorage.setItem('postsdata',this.$root.posts)
+
+
+
+
+      var getlocalstaoragedata = localStorage.getItem('postsdata')
+      if (getlocalstaoragedata) {
+        var x = JSON.parse(getlocalstaoragedata)
+       
+      }
+
+      localStorage.setItem('postsdata', JSON.stringify(this.$root.posts));
+      var x = localStorage.getItem('postsdata')
+      console.log("local storage data :"+x)
     },
   },
   template: `
-
+  
     <div class="form"  name="post">
     <form @submit.prevent="postArticle" name="createpost" role="form">
     <label for="title">Title</label>

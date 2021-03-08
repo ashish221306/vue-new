@@ -41,6 +41,39 @@ main {
   width: 100%;
   overflow-x: hidden;
 }
+.child-parent{
+ 
+
+  min-height: 90vh;
+
+}
+.child-parent input{
+  padding: 20px;
+}
+.child{
+  margin: 30px;
+  border: 2px solid rgb(32, 105, 38);
+}
+.parent{
+  border: 2px solid red;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.child,.parent{
+  flex: 50%;
+  
+  background:#ddd;
+ 
+ 
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 header {
   padding: 20px;
   font-size: 22px;

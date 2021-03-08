@@ -6,7 +6,6 @@ const routes = [
   { path: '/newpost', component: newpost },
   { path: '/allpost', component: allpost },
   { path: '**', component: notfound },
-
 ]
 
 const router = new VueRouter({
@@ -85,9 +84,8 @@ app1.component('navbar', navigation);
 app1.component('home', home)
 app1.component('notfound', notfound)
 app1.component('getuser', getuser);
+app1.component('child', child);
+app1.component('parent', parent);
 const vm = app1.mount("#myapp");
-
-
-
 
 console.log("myfontsize :" + window.myfontsize)
