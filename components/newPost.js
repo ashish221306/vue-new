@@ -57,7 +57,7 @@ const newpost = {
      <div class="input-group">
     <label for="image">image url</label>
 
-     <input id="image" type="text" name="image" placeholder="image url" v-model="image" />  <img v-if="image" :src="image" height="200" width="60"/>
+     <input id="image" type="text" name="image" placeholder="image url" v-model="image" />  <img  v-if="image" :src="image" height="200" alt="akjlhdrifu" width="60"/>
      </div>
     <label for="author">author</label>
      

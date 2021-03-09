@@ -23,6 +23,7 @@ var app = {
       myname: 'ashish',
       show: true,
       postdata: ' done',
+      postslist:'',
       incfont: 20,
       currentRoute: window.location.pathname,
       /* dynamic css class for vue :class */
@@ -50,6 +51,12 @@ var app = {
       if (this.incfont < 30) {
         this.incfont = 20
       }
+    }
+    ,
+    async getpostlist(){
+      const res=await axios.get('https://jsonplaceholder.typicode.com/posts');
+      console.log(res);
+      this.postslist=res
     }
 
 
@@ -89,3 +96,7 @@ app1.component('parent', parent);
 const vm = app1.mount("#myapp");
 
 console.log("myfontsize :" + window.myfontsize)
+
+
+
+

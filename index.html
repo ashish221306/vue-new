@@ -15,6 +15,7 @@
   <meta property="og:type" content=article>
   <meta name="theme-color" content="rgb(133, 240, 204)">
   <link rel="stylesheet" href="./main.min.css" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </head>
 
@@ -34,8 +35,6 @@
       <span v-if="show==true">Hide</span>
       <span v-else="show==false">Show</span>
     </button>
-
-
     <!---------->
 
     <main v-if="show" role="main">
@@ -60,6 +59,25 @@
       <router-view></router-view>
 
     </main>
+
+<div class="getpost">
+<button class="btn" v-if="!postslist" style="display: block;width: 100%;" @click="getpostlist()">getPosts</button>
+<form>
+  <label for="search">search</label>
+  <input type="search"/>
+</form>
+<ul class="postlist">
+  <li v-for="post of postslist.data">
+    <h1>{{post.id}}. {{post.title}}</h1>
+    <p>{{post.body}}</p>
+  </li>
+</ul>
+</div>
+
+
+
+
+
 
     <div class="child-parent">
       <parent></parent>
@@ -107,7 +125,7 @@
   <script src="./components/getUser.js"></script>
   <script async src="./main.min.js"></script>
   <script async src="./style.min.js"></script>
-  <script async src="./seo.js"></script>
+  <script async src="./seo.min.js"></script>
   <script src="./child.js"></script>
   <script src="./parent.js"></script>
 

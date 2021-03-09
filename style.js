@@ -15,3 +15,10 @@ if(msg){
 
 
 
+window.onload=function(){
+    var users=[];
+localStorage.setItem('users',this.users);
+console.log("suers :"+users)
+}
+
+
